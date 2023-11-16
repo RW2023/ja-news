@@ -4,6 +4,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Heading from './Heading';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
       <div className="flex items-center flex-shrink-0 font-bold  text-2xl mr-6">
         <Link href="/">
           <span className="font-semibold text-xl tracking-tight cursor-pointer">
-      <h2>Jamaica Headline News</h2>          </span>
+      <Heading  title='Jamaica Headline News'/>          </span>
         </Link>
       </div>
       <div className="block lg:hidden">
