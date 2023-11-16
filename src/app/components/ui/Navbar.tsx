@@ -13,8 +13,7 @@ const Navbar = () => {
       <div className="flex items-center flex-shrink-0 font-bold  text-2xl mr-6">
         <Link href="/">
           <span className="font-semibold text-xl tracking-tight cursor-pointer">
-       <p>Jamaica Headline News</p>
-          </span>
+      <h2>Jamaica Headline News</h2>          </span>
         </Link>
       </div>
       <div className="block lg:hidden">
