@@ -8,7 +8,7 @@ interface ArticleListProps {
   articles: NewsArticle[];
 }
 
-const placeholderImage = '/imagePlaceHolder.png'; // Placeholder image path
+const placeholderImage = '/PlaceHolder.png'; // Placeholder image path
 
 const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
   return (
@@ -16,7 +16,7 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
       {articles.map((article, index) => (
         <div
           key={index}
-          className="p-4 rounded-lg shadow-lg bg-background border border-headline"
+          className="p-4 rounded-lg shadow-lg bg-base-300 border"
         >
           <h2 className="text-base md:text-lg font-bold mb-2 text-headline">
             {article.title}
