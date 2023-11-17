@@ -6,5 +6,6 @@ export interface NewsArticle {
   link: string;
   pubDate: string;
   image_url: string;
+  creator: string;
   // Add more fields from your news data as needed
 }
