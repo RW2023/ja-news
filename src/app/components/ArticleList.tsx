@@ -3,7 +3,6 @@
 
 import React from 'react';
 import { NewsArticle } from '@/app/types/NewsArticles';
-import Link from 'next/link';
 
 interface ArticleListProps {
   articles: NewsArticle[];
@@ -29,7 +28,7 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
             Outlet: {article.source_id}
           </p>
           <p className="text-sm m-2 text-paragraph text-left">
-            Author: {article.creator}
+           Author:  {article.creator}
           </p>{' '}
           <img
             src={article.image_url || placeholderImage}
@@ -38,7 +37,9 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
           />
           <p className="mb-2 text-paragraph text-left">{article.description}</p>
           <a
-            href={`/articles/${article.article_id}`}
+            href={article.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-button hover:text-headline hover:text-opacity-100 hover:underline"
           >
             Read more
