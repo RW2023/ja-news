@@ -18,15 +18,15 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
           key={index}
           className="p-4 rounded-lg shadow-lg bg-base-300 border"
         >
-          <h2 className="text-base md:text-lg font-bold mb-2 text-headline">
+          <h2 className="text-base font-bold mb-2 text-headline bg-black">
             {article.title}
           </h2>
-          <img
+            <p className="text-sm m-2 text-paragraph text-left">{article.creator}</p>          <img
             src={article.image_url || placeholderImage}
             alt={article.title}
-            className="w-full rounded-lg mb-4 object-cover"
+            className="w-full rounded-lg mb-4 object-cover bg-background p-2"
           />
-          <p className="mb-2 text-paragraph text-lg">{article.description}</p>
+          <p className="mb-2 text-paragraph text-left">{article.description}</p>
           <a
             href={article.link}
             target="_blank"

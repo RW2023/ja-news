@@ -26,8 +26,10 @@ const YourNewsPage: React.FC = () => {
   }
 
   return (
-    <div className="text-3xl text-center font-sans font-bold">
-      <h1>Latest Headlines</h1>
+    <div>
+      <h1 className="text-3xl text-center font-sans font-bold">
+        Latest Headlines
+      </h1>
       {newsData && <ArticleList articles={newsData.results} />}
     </div>
   );
