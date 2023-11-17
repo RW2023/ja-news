@@ -11,12 +11,12 @@ export default function Home() {
           <Image
             src="/placeHolder.png"
             alt="Placeholder"
-            width={500} // Set appropriate width
-            height={300} // Set appropriate height
+            width={400} // Set appropriate width
+            height={400} // Set appropriate height
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
-            <h1 className="text-5xl font-bold">Latest Headlines from Yaad</h1>
+            <h1 className="text-5xl font-bold">Headlines from Yaad</h1>
             <p className="py-6">
              Read headlines from Yaad and around the world.
             </p>
