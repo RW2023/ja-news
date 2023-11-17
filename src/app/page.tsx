@@ -1,11 +1,34 @@
-//src/app/page.tsx
+// src/app/page.tsx
 import React from 'react';
-import Heading from '@/app/components/ui/Heading';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className='text-4xl text-center m-4'>
-     <Heading title='Home' />
-    </div>
+    <>
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col lg:flex-row">
+          <Image
+            src="/placeHolder.png"
+            alt="Placeholder"
+            width={500} // Set appropriate width
+            height={300} // Set appropriate height
+            className="max-w-sm rounded-lg shadow-2xl"
+          />
+          <div>
+            <h1 className="text-5xl font-bold">Latest Headlines from Yaad</h1>
+            <p className="py-6">
+             Read headlines from Yaad and around the world.
+            </p>
+            <Link
+              href="/news"
+              
+            >
+            <button type="button" className="btn btn-primary">Get Headlines</button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
