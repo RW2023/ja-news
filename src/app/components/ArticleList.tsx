@@ -33,9 +33,9 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
           <img
             src={article.image_url || placeholderImage}
             alt={article.title}
-            className="w-full rounded-lg mb-4 object-cover bg-background p-2"
+            className="w-full rounded-lg mb-4 object-cover bg-secondary p-2"
           />
-          <p className="mb-2 text-paragraph text-left">{article.description}</p>
+          <p className="mb-2 text-headline text-left text-xl bg-black rounded-lg m-1">{article.description}</p>
           <a
             href={article.link}
             target="_blank"
