@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // components/ArticleList.tsx
 
 import React from 'react';
