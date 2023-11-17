@@ -6,7 +6,7 @@ const Loading: FC = (): JSX.Element => {
     <div className="flex items-center justify-center h-screen">
       <div className="text-center">
         <p className="text-3xl">
-          <span className="loading loading-bars loading-lg m-2"></span> Loading
+          <span className="m-2"></span> Loading
           articles.....☝🏾
         </p>
       </div>
