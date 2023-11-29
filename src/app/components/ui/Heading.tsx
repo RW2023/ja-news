@@ -18,8 +18,8 @@ const Heading: FC<Props> = (props): JSX.Element => {
 
   return (
     <div>
-      <h2 className="text-center font-sans text-2xl m-8 ">{props.title}</h2>
-      </div>
+      <h1 className="text-center font-poppins text-2xl m-8">{props.title}</h1>
+    </div>
   );
 };
 
