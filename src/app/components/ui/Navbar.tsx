@@ -1,32 +1,35 @@
-// src/Components/UI/Navbar.tsx
-
-'use client'; 
+//src/components/ui/Navbar.tsx
+'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Heading from './Heading';
+import Heading from '@/app/components/ui/Heading';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky-top-0 z-50 flex items-center justify-between flex-wrap bg-base-500 p-6 font-sans navbar mt-3">
-      <div className="flex items-center flex-shrink-0 font-bold  text-2xl mr-6">
+    <nav
+      className="flex items-center justify-between flex-wrap p-3 navbar mt-3 sticky top-0 z-50  bg-base-200 mb-2"
+      style={{ fontFamily: "'Poppins', sans-serif" }}
+    >
+      <div className="flex items-center flex-shrink-0 text-2xl mr-6">
         <Link href="/">
           <span className="font-semibold text-xl tracking-tight cursor-pointer">
-      <Heading  title='Jamaica Headline News'/>          </span>
+            <Heading title="Jamaica Headline News" />{' '}
+          </span>
         </Link>
       </div>
       <div className="block lg:hidden">
-        <button type='button'
+        <button
+          type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="text-xl inline-flex items-center justify-center p-2 rounded-md hover:text-buttonText hover:bg-button focus:outline-none focus:ring-2 focus:ring-inset focus:ring-base-500"
+          className="text-3xl inline-flex items-center justify-center p-2 rounded-md  hover:bg-button hover:text-buttonText focus:outline-1 focus:ring-2 focus:ring-inset focus:ring-buttonText text-base-content"
         >
           {isOpen ? (
-            // Close icon when the menu is open
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-8 w-8"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -39,10 +42,9 @@ const Navbar = () => {
               />
             </svg>
           ) : (
-            // Hamburger icon when the menu is closed
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-8 w-8"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
