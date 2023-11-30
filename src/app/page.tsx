@@ -31,24 +31,24 @@ export default function Home() {
   return (
     <>
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row">
+        <div className="hero-content flex-col lg:flex-row flex-wrap">
           <Image
             src="/placeHolder.png"
             alt="Placeholder"
-            width={400}
-            height={400}
+            width={300}
+            height={250}
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
-            <h1 className="text-5xl font-bold">Headlines from Yaad</h1>
+            <h1 className="text-5xl font-bold text-center">Headlines from Yaad</h1>
             <SubHeading title="Sample Stories" />
             {isLoading ? (
               <LoadingHomePage />
             ) : (
               articles.map((article, index) => (
-                <div key={index} className="flex flex-col justify-center text-lg">
+                <div key={index} className="text-lg">
                   <Link href={'/news'}>
-                    <h3 className='btn p-4 border border-headline m-1 bg-base-300 rounded-md shadow-2xl'>{article.title}</h3>                  </Link>
+                    <h3 className='btn p-1 border border-headline m-1 bg-base-300 rounded-md shadow-2xl'>{article.title}</h3>                  </Link>
                   {/* Add more details from the article as needed */}
                 </div>
               ))
