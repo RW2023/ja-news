@@ -1,4 +1,3 @@
-//src/Components/FeedbackForm.tsx
 'use client';
 
 import { FC } from 'react';
@@ -12,7 +11,9 @@ const FeedbackForm: FC<Props> = (props): JSX.Element => {
       <Heading title="Feedback Form" />
       <form className="form-control w-full max-w-xs flex flex-col justify-center m-auto">
         <label className="label" htmlFor="name">
-          <span className="label-text">Name</span>
+          <span className="label-text">
+            <i className="fas fa-user mr-2"></i>Name
+          </span>
         </label>
         <input
           type="text"
@@ -22,7 +23,9 @@ const FeedbackForm: FC<Props> = (props): JSX.Element => {
         />
 
         <label className="label" htmlFor="email">
-          <span className="label-text">Email</span>
+          <span className="label-text">
+            <i className="fas fa-envelope mr-2"></i>Email
+          </span>
         </label>
         <input
           type="email"
@@ -32,7 +35,9 @@ const FeedbackForm: FC<Props> = (props): JSX.Element => {
         />
 
         <label className="label" htmlFor="feedback">
-          <span className="label-text">Feedback</span>
+          <span className="label-text">
+            <i className="fas fa-comments mr-2"></i>Feedback
+          </span>
         </label>
         <textarea
           id="feedback"

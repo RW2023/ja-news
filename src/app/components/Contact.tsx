@@ -10,7 +10,9 @@ const Contact: FC<Props> = (props): JSX.Element => {
       <Heading title="Contact Us" />
       <form className="form-control w-full max-w-xs">
         <label className="label" htmlFor="name">
-          <span className="label-text">Name</span>
+          <span className="label-text">
+            <i className="fas fa-user mr-2"></i>Name
+          </span>
         </label>
         <input
           type="text"
@@ -20,7 +22,9 @@ const Contact: FC<Props> = (props): JSX.Element => {
         />
 
         <label className="label" htmlFor="email">
-          <span className="label-text">Email</span>
+          <span className="label-text">
+            <i className="fas fa-envelope mr-2"></i>Email
+          </span>
         </label>
         <input
           type="email"
@@ -30,7 +34,9 @@ const Contact: FC<Props> = (props): JSX.Element => {
         />
 
         <label className="label" htmlFor="subject">
-          <span className="label-text">Subject</span>
+          <span className="label-text">
+            <i className="fas fa-tag mr-2"></i>Subject
+          </span>
         </label>
         <input
           type="text"
@@ -40,7 +46,9 @@ const Contact: FC<Props> = (props): JSX.Element => {
         />
 
         <label className="label" htmlFor="message">
-          <span className="label-text">Message</span>
+          <span className="label-text">
+            <i className="fas fa-comments mr-2"></i>Message
+          </span>
         </label>
         <textarea
           id="message"
