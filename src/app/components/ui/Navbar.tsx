@@ -64,7 +64,12 @@ const Navbar = () => {
           isOpen ? 'block' : 'hidden'
         } w-full lg:flex lg:items-center lg:w-auto lg:justify-end`}
       >
-        <div className="text-sm lg:flex-grow">
+        <div className="text-sm lg:flex-grow">]
+        <Link href={'/news'}>
+            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-strokeDark mr-4 cursor-pointer">
+              News
+            </span>
+        </Link>
           <Link href="/about">
             <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-strokeDark  mr-4 cursor-pointer">
               About
