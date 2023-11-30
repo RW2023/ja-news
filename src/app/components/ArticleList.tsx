@@ -18,29 +18,29 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
           key={index}
           className="p-4 rounded-lg shadow-lg bg-base-300 border"
         >
-          <h2 className="text-2xl  font-bold mb-2 text-headline bg-black">
+          <h2 className="text-2xl  font-bold mb-2  bg-base-300">
             {article.title}
           </h2>
-          <p className="m-2 text-paragraph text-left">
+          <p className="m-2 text-base text-left">
             Article Published {article.pubDate}
           </p>
-          <p className="text-sm m-2 text-paragraph text-left">
-            Outlet: {article.source_id}
-          </p>
-          <p className="text-sm m-2 text-paragraph text-left">
-           Author:  {article.creator}
+          <p className="text-sm m-2  text-left">Outlet: {article.source_id}</p>
+          <p className="text-sm m-2  text-left">
+            Author: {article.creator}
           </p>{' '}
           <img
             src={article.image_url || placeholderImage}
             alt={article.title}
-            className="w-full rounded-lg mb-4 object-cover bg-secondary p-2"
+            className="w-full rounded-lg mb-4 object-cover bg-base-200 p-2"
           />
-          <p className="mb-2 text-headline text-left text-xl bg-black rounded-lg m-1">{article.description}</p>
+          <p className="mb-2 text-left text-xl bg-base-300 rounded-lg m-1">
+            {article.description}
+          </p>
           <a
             href={article.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-button hover:text-headline hover:text-opacity-100 hover:underline"
+            className="btn btn-primary mt-4 rounded-md border text-lg"
           >
             Read more
           </a>
