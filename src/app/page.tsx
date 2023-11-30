@@ -50,8 +50,10 @@ export default function Home() {
               articles.map((article, index) => (
                 <div key={index} className="text-lg flex sm:flex-col flex-wrap">
                   <Link href={'/news'}>
-                    <SubHeading title={article.title} />
-                    <div className="bg-bg-base">
+                    <div className='bg-base-300 border flex-col justify-center flex items-center align-middle'>
+                      <SubHeading title={article.title} />
+                    </div>
+                    <div className="bg-bg-base-300 rounded-md p-4 border-headline">
                       <p className="mx-auto drop-shadow-lg bg-base-200 mb-3">{article.description}</p>
                     </div>
                   </Link>
