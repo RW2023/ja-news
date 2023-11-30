@@ -49,7 +49,7 @@ const Footer: FC<Props> = (props): JSX.Element => {
         </div>
       </nav>
       <aside>
-        <p>Copyright © 2023 - All right reserved by Ja-News</p>
+        <p>Copyright © 2023 - All right reserved by JA-News</p>
       </aside>
     </footer>
   );
