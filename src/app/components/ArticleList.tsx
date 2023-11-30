@@ -42,7 +42,7 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
             rel="noopener noreferrer"
             className="btn btn-primary mt-4 rounded-md border text-lg drop-shadow-2xl"
           >
-            Read more
+            <i className="fas fa-chevron-right mr-2"></i>Read more
           </a>
           {/* Additional elements (like share buttons) can be added here */}
         </div>
