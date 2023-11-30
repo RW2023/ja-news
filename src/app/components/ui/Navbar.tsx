@@ -17,7 +17,7 @@ const Navbar = () => {
           <span className="font-semibold text-xl tracking-tight cursor-pointer">
             <div>
               <i className="fas fa-globe mr-2"></i>
-              <Heading title="Jamaica Headline News" />
+              <Heading title="JA-News" />
             </div>
           </span>
         </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
             </span>
           </Link>
           <Link href="/themes">
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-strokeDark mr-4 cursor-pointer tracking-tight border-stroke hover:text-button hover:border-headline ease-in-out transition-transform">
+            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-buttonText cursor-pointer mr-2 border-base-300 ease-in-out transition-transform">
               <i className="fas fa-palette mr-2"></i>Themes
             </span>
           </Link>
