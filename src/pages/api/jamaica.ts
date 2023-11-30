@@ -1,3 +1,4 @@
+//src/pages/api/jamaica.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 import NodeCache from 'node-cache';
