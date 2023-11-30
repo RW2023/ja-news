@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="flex items-center justify-between flex-wrap p-3 navbar mt-3 sticky top-0 z-50  bg-base-200 mb-2"
+      className="flex items-center justify-between flex-wrap p-3 navbar mt-3 sticky top-0 z-50  bg-base-200 mb-2 shadow-2xl"
       style={{ fontFamily: "'Poppins', sans-serif" }}
     >
       <div className="flex items-center flex-shrink-0 text-2xl mr-6">
@@ -76,7 +76,7 @@ const Navbar = () => {
             </span>
           </Link>
           <Link href="/contact">
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-buttonText cursor-pointer">
+            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-buttonText cursor-pointer mr-2 border-base-300">
               Contact
             </span>
           </Link>
