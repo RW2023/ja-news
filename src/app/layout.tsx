@@ -16,7 +16,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" data-theme="dracula">
+      <head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        
+
+        </head>
       <body>
         <Navbar />
         {children}
