@@ -40,7 +40,7 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
             href={article.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary mt-4 rounded-md border text-lg"
+            className="btn btn-primary mt-4 rounded-md border text-lg drop-shadow-2xl"
           >
             Read more
           </a>
