@@ -1,9 +1,33 @@
 // src/app/page.tsx
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import SubHeading from './components/ui/SubHeading';
+import axios from 'axios';
+import LoadingHomePage from './components/ui/LoadingHomePage';
+import { NewsArticle } from '@/app/types/NewsArticles'; // Import NewsArticle type
 
 export default function Home() {
+  const [articles, setArticles] = useState<NewsArticle[]>([]); // Use the NewsArticle type
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      try {
+        setIsLoading(true);
+        const response = await axios.get('/api/jamaica');
+        setArticles(response.data.results.slice(0, 3)); // Adjust number of articles as needed
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Error fetching articles:', error);
+        setIsLoading(false);
+      }
+    };
+
+    fetchArticles();
+  }, []);
+
   return (
     <>
       <div className="hero min-h-screen bg-base-200">
@@ -11,20 +35,31 @@ export default function Home() {
           <Image
             src="/placeHolder.png"
             alt="Placeholder"
-            width={400} // Set appropriate width
-            height={400} // Set appropriate height
+            width={400}
+            height={400}
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
             <h1 className="text-5xl font-bold">Headlines from Yaad</h1>
-            <p className="py-6">
-             Read headlines from Yaad and around the world.
-            </p>
-            <Link
-              href="/news"
-              
-            >
-            <button type="button" className="btn btn-primary">Get Headlines</button>
+            <SubHeading title="Sample Stories" />
+            {isLoading ? (
+              <LoadingHomePage />
+            ) : (
+              articles.map((article, index) => (
+                <div key={index} className="flex flex-col justify-center text-lg">
+                  <Link href={'/news'}>
+                    <h3 className='btn p-4 border border-headline m-1 bg-base-300 rounded-md shadow-2xl'>{article.title}</h3>                  </Link>
+                  {/* Add more details from the article as needed */}
+                </div>
+              ))
+            )}
+            <Link href="/news">
+              <button
+                type="button"
+                className="btn btn-primary mt-4 rounded-md border text-lg"
+              >
+                Get Headlines
+              </button>
             </Link>
           </div>
         </div>
