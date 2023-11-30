@@ -15,7 +15,10 @@ const Navbar = () => {
       <div className="flex items-center flex-shrink-0 text-2xl mr-6">
         <Link href="/">
           <span className="font-semibold text-xl tracking-tight cursor-pointer">
-            <Heading title="Jamaica Headline News" />
+            <div>
+              <i className="fas fa-globe mr-2"></i>
+              <Heading title="Jamaica Headline News" />
+            </div>
           </span>
         </Link>
       </div>
