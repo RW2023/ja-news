@@ -43,16 +43,17 @@ export default function Home() {
             <h1 className="text-5xl font-bold text-center">
               Headlines from Yaad
             </h1>
-            <SubHeading title="Sample Stories" />
+            <SubHeading title="Recent Headlines" />
             {isLoading ? (
               <LoadingHomePage />
             ) : (
               articles.map((article, index) => (
-                <div key={index} className="text-lg">
+                <div key={index} className="text-lg flex sm:flex-col flex-wrap">
                   <Link href={'/news'}>
-                    <h3 className="btn p-1 border border-stroke m-1 bg-black rounded-md shadow-2xl justify-center items-center">
-                      {article.title}
-                    </h3>{' '}
+                    <SubHeading title={article.title} />
+                    <div className="bg-bg-base">
+                      <p className="mx-auto drop-shadow-lg bg-base-200 mb-3">{article.description}</p>
+                    </div>
                   </Link>
                   {/* Add more details from the article as needed */}
                 </div>
