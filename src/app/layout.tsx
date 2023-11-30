@@ -6,8 +6,8 @@ import Footer from '@/app/components/ui/Footer'
 
 
 export const metadata: Metadata = {
-  title: 'Jamaica News',
-  description: 'Headlines from Yard',
+  title: 'JA-News',
+  description: 'Headlines from Yaad',
 }
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-theme="dracula">
+    <html lang="en" data-theme="business">
       <head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
