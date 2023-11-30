@@ -8,7 +8,7 @@ interface ArticleListProps {
   articles: NewsArticle[];
 }
 
-const placeholderImage = '/placeHolder.png'; // Placeholder image path
+const placeholderImage = '/flag.png'; // Placeholder image path
 
 const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
   return (

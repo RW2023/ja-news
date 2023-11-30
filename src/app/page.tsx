@@ -33,7 +33,7 @@ export default function Home() {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row flex-wrap">
           <Image
-            src="/placeHolder.png"
+            src="/flag.png"
             alt="Placeholder"
             width={300}
             height={250}
