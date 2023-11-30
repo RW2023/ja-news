@@ -48,7 +48,7 @@ const Contact: FC<Props> = (props): JSX.Element => {
           className="textarea textarea-bordered h-24"
         ></textarea>
 
-        <button type="submit" className="btn btn-primary mt-4">
+        <button type="submit" className="btn btn-primary mt-4 mb-2">
           Send
         </button>
       </form>
