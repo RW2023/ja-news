@@ -40,7 +40,9 @@ export default function Home() {
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
-            <h1 className="text-5xl font-bold text-center">Headlines from Yaad</h1>
+            <h1 className="text-5xl font-bold text-center">
+              Headlines from Yaad
+            </h1>
             <SubHeading title="Sample Stories" />
             {isLoading ? (
               <LoadingHomePage />
@@ -48,7 +50,10 @@ export default function Home() {
               articles.map((article, index) => (
                 <div key={index} className="text-lg">
                   <Link href={'/news'}>
-                    <h3 className='btn p-1 border border-headline m-1 bg-base-300 rounded-md shadow-2xl'>{article.title}</h3>                  </Link>
+                    <h3 className="btn p-1 border border-stroke m-1 bg-black rounded-md shadow-2xl justify-center items-center">
+                      {article.title}
+                    </h3>{' '}
+                  </Link>
                   {/* Add more details from the article as needed */}
                 </div>
               ))
