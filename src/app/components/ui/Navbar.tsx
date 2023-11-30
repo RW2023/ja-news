@@ -1,4 +1,3 @@
-//src/components/ui/Navbar.tsx
 'use client';
 
 import { useState } from 'react';
@@ -10,13 +9,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className="flex items-center justify-between flex-wrap p-3 navbar mt-3 sticky top-0 z-50  bg-base-200 mb-2 shadow-2xl"
+      className="flex items-center justify-between flex-wrap p-3 navbar mt-3 sticky top-0 z-50 bg-base-200 mb-2 shadow-2xl"
       style={{ fontFamily: "'Poppins', sans-serif" }}
     >
       <div className="flex items-center flex-shrink-0 text-2xl mr-6">
         <Link href="/">
           <span className="font-semibold text-xl tracking-tight cursor-pointer">
-            <Heading title="Jamaica Headline News" />{' '}
+            <Heading title="Jamaica Headline News" />
           </span>
         </Link>
       </div>
@@ -24,7 +23,7 @@ const Navbar = () => {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="text-3xl inline-flex items-center justify-center p-2 rounded-md  hover:bg-button hover:text-buttonText focus:outline-1 focus:ring-2 focus:ring-inset focus:ring-buttonText text-base-content"
+          className="text-3xl inline-flex items-center justify-center p-2 rounded-md hover:bg-button hover:text-buttonText focus:outline-1 focus:ring-2 focus:ring-inset focus:ring-buttonText text-base-content"
         >
           {isOpen ? (
             <svg
@@ -65,24 +64,29 @@ const Navbar = () => {
         } w-full lg:flex lg:items-center lg:w-auto lg:justify-end`}
       >
         <div className="text-sm lg:flex-grow">
-        <Link href={'/news'}>
+          <Link href={'/news'}>
             <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-strokeDark mr-4 cursor-pointer">
-              News
+              <i className="fas fa-newspaper mr-2"></i>News
             </span>
-        </Link>
+          </Link>
           <Link href="/about">
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-strokeDark  mr-4 cursor-pointer">
-              About
+            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-strokeDark mr-4 cursor-pointer">
+              <i className="fas fa-info-circle mr-2"></i>About
             </span>
           </Link>
           <Link href="/feedback">
             <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-buttonText mr-4 cursor-pointer">
-              Feedback
+              <i className="fas fa-comments mr-2"></i>Feedback
             </span>
           </Link>
           <Link href="/contact">
             <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-buttonText cursor-pointer mr-2 border-base-300">
-              Contact
+              <i className="fas fa-envelope mr-2"></i>Contact
+            </span>
+          </Link>
+          <Link href="/themes">
+            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-strokeDark mr-4 cursor-pointer tracking-tight border-stroke hover:text-button hover:border-headline ease-in-out transition-transform">
+              <i className="fas fa-palette mr-2"></i>Themes
             </span>
           </Link>
         </div>
