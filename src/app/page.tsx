@@ -35,7 +35,7 @@ export default function Home() {
           <Image
             src="/flag.png"
             alt="Placeholder"
-            width={300}
+            width={250}
             height={250}
             className="max-w-sm rounded-lg shadow-2xl"
           />
