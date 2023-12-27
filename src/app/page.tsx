@@ -57,12 +57,13 @@ export default function Home() {
                   <Link
                     key={index}
                     href={'/news'}
-                    className="bg-base-300 border flex-col justify-center flex items-center align-middle p-4"
+                    className="card bg-base-300 border flex-col justify-center flex items-center align-middle p-4"
                   >
-                    <SubHeading title={article.title} />
-                    <p className="mx-auto drop-shadow-lg bg-base-200 mb-3 rounded-md">
-                      {article.description}
-                    </p>
+                    <div className="card-title">
+                      <SubHeading title={article.title} />
+                    </div>
+                    <div className="card-body p-1 mx-auto drop-shadow-lg bg-base-900 mb-3 rounded-md">                      <p className="text-lg">{article.description}</p>
+                    </div>
                   </Link>
                 ))}
               </div>
