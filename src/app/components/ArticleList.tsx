@@ -12,11 +12,18 @@ const placeholderImage = '/flag.png'; // Placeholder image path
 
 const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
   return (
-    <div className="container grid gap-6 p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 shadow-lg mr-auto ">
+    <div
+      className="container grid gap-6 p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 shadow-lg mr-auto "
+      style={{
+        backgroundImage: 'url(/flag.png)',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain',
+      }}
+    >
       {articles.map((article, index) => (
         <div
           key={index}
-          className="card p-4 rounded-lg shadow-lg  border drop-shadow-md"
+          className="card p-4 rounded-lg shadow-lg  border drop-shadow-md bg-base-300"
         >
           <div className="card-title flex justify-center items-center">
             <h2 className="text-2xl  font-bold mb-2 border-y border-1 drop-shadow-xl">
@@ -38,10 +45,8 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
               className="w-full rounded-lg mb-4 object-cover bg-base-200 p-2"
             />
           </div>
-          <div className='card-body mb-2 text-left text-xl bg-base-300 rounded-lg m-1 drop-shadow-md border-y-2'>
-            <p className="text-lg">
-              {article.description}
-            </p>
+          <div className="card-body mb-2 text-left text-xl bg-base-300 rounded-lg m-1 drop-shadow-md border-y-2">
+            <p className="text-lg">{article.description}</p>
             <a
               href={article.link}
               target="_blank"
