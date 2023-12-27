@@ -22,12 +22,21 @@ const YourNewsPage: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return <div><Loading /></div>; // Loading indicator
+    return (
+      <div>
+        <Loading />
+      </div>
+    ); // Loading indicator
   }
 
   return (
     <div>
-      <h1 className="text-3xl text-center font-sans font-bold">
+      <h1
+        className="text-3xl text-center font-sans font-bold"
+        style={{
+          backgroundImage: 'url(/flag.png)',
+        }}
+      >
         Latest Headlines
       </h1>
       {newsData && <ArticleList articles={newsData.results} />}
