@@ -30,15 +30,11 @@ const YourNewsPage: React.FC = () => {
   }
 
   return (
-    <div>
-      <h1
-        className="text-3xl text-center font-sans font-bold"
-        style={{
-          backgroundImage: 'url(/flag.png)',
-        }}
-      >
-        Latest Headlines
-      </h1>
+    <div
+      className="text-3xl text-center font-sans font-bold"
+  
+    >
+      <h1>Latest Headlines</h1>
       {newsData && <ArticleList articles={newsData.results} />}
     </div>
   );
