@@ -1,37 +1,94 @@
 'use client';
-
 import { useState } from 'react';
 import Link from 'next/link';
-import Heading from '@/app/components/ui/Heading';
+import SubHeading from './SubHeading';
+import DarkModeToggle from './DarkModeToggle';
+import { motion, useAnimation } from 'framer-motion';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
+
+  const variants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  const buttonVariants = {
+    open: {
+      rotate: 180,
+      scale: 1.2,
+      transition: {
+        duration: 0.6,
+      },
+    },
+    closed: {
+      rotate: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
+  const buttonControls = useAnimation();
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+    buttonControls.start(isOpen ? 'closed' : 'open');
+  };
+
   return (
-    <nav
-      className="flex items-center justify-between flex-wrap p-3 navbar mt-3 sticky top-0 z-50 bg-base-200 mb-2 shadow-2xl"
+    <motion.nav
+      className="flex items-center justify-between flex-wrap p-3 navbar mt-0 sticky top-0 z-20 bg-base-200 shadow-2xl bg-opacity-90"
       style={{ fontFamily: "'Poppins', sans-serif" }}
+      initial="hidden"
+      animate="show"
+      variants={variants}
     >
       <div className="flex items-center flex-shrink-0 text-2xl mr-6">
         <Link href="/">
-          <span className="font-semibold text-xl tracking-tight cursor-pointer">
-            <div>
-              <i className="fas fa-globe mr-2"></i>
-              <Heading title="JA-News" />
+          <span
+            onClick={closeNavbar}
+            className="font-semibold text-xl tracking-tight cursor-pointer"
+          >
+            <div className="flex items-center">
+              {/* Logo Image */}
+              <Image
+                src="/flag.png" // Specify the path to your logo image
+                alt="Logo"
+                width={50}
+                height={50}
+                className="icon m-1 rounded-full border-2"
+              />
+              {/* SubHeading */}
+              <SubHeading title="JA-News" iconClass="fas fa-newspaper" />{' '}
             </div>
           </span>
         </Link>
       </div>
       <div className="block lg:hidden">
-        <button
+        <motion.button
           type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-3xl inline-flex items-center justify-center p-2 rounded-md hover:bg-button hover:text-buttonText focus:outline-1 focus:ring-2 focus:ring-inset focus:ring-buttonText text-base-content"
+          onClick={toggleNavbar}
+          className="text-4xl inline-flex items-center justify-center p-2 rounded-md hover:bg-button hover:text-buttonText focus:outline-none focus:ring-2 focus:ring-inset focus:ring-buttonText text-base-content"
+          animate={buttonControls}
+          variants={buttonVariants}
+          initial="closed"
         >
           {isOpen ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
+              className="h-10 w-10"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -46,7 +103,7 @@ const Navbar = () => {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
+              className="h-10 w-10"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -59,7 +116,7 @@ const Navbar = () => {
               />
             </svg>
           )}
-        </button>
+        </motion.button>
       </div>
       <div
         className={`${
@@ -67,34 +124,42 @@ const Navbar = () => {
         } w-full lg:flex lg:items-center lg:w-auto lg:justify-end`}
       >
         <div className="text-sm lg:flex-grow">
-          <Link href={'/news'}>
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-strokeDark mr-4 cursor-pointer">
-              <i className="fas fa-newspaper mr-2"></i>News
+          <Link href="/news">
+            <span
+              onClick={closeNavbar}
+              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
+            >
+              <i className="fas fa-newspaper mr-2"></i>News{' '}
             </span>
           </Link>
           <Link href="/about">
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-strokeDark mr-4 cursor-pointer">
-              <i className="fas fa-info-circle mr-2"></i>About
+            <span
+              onClick={closeNavbar}
+              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
+            >
+              <i className="fas fa-info mr-2"></i>About
             </span>
           </Link>
           <Link href="/feedback">
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-buttonText mr-4 cursor-pointer">
+            <span
+              onClick={closeNavbar}
+              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:underline mr-4 cursor-pointer"
+            >
               <i className="fas fa-comments mr-2"></i>Feedback
             </span>
           </Link>
           <Link href="/contact">
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-buttonText cursor-pointer mr-2 border-base-300">
+            <span
+              onClick={closeNavbar}
+              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:underline cursor-pointer mr-2"
+            >
               <i className="fas fa-envelope mr-2"></i>Contact
             </span>
           </Link>
-          <Link href="/themes">
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-buttonText cursor-pointer mr-2 border-base-300 ease-in-out transition-transform">
-              <i className="fas fa-palette mr-2"></i>Themes
-            </span>
-          </Link>
+          <DarkModeToggle />
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
