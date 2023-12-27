@@ -1,16 +1,15 @@
 'use client';
-import { FC } from 'react';
+import React from 'react';
 
-const Loading: FC = (): JSX.Element => {
+const Loading = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center">
       <div className="text-center">
         <p className="text-3xl">
           <span className="m-2">
             <span className="loading loading-bars loading-lg"></span>
           </span>{' '}
-          Loading articles.....☝🏾its taking a bit if you can read this message.
-          Our Bad ☹️. any second now...⏱️
+          Loading.....Fetching Articles...⏱️
         </p>
       </div>
     </div>
