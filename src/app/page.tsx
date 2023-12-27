@@ -7,6 +7,8 @@ import axios from 'axios';
 import LoadingHomePage from './components/ui/LoadingHomePage';
 import { NewsArticle } from '@/app/types/NewsArticles'; // Import NewsArticle type
 import Heading from './components/ui/Heading';
+import HomeHeading from './components/ui/HomeHeading';
+import HomeSubHeading from './components/ui/HomeSubHeading';
 
 export default function Home() {
   const [articles, setArticles] = useState<NewsArticle[]>([]);
@@ -30,18 +32,23 @@ export default function Home() {
 
   return (
     <>
-      <div className="hero min-h-screen bg-base-200">
+      <div
+        className="hero min-h-screen"
+        style={{
+          backgroundImage: 'url(/flag.png)',
+        }}
+      >
         <div className="hero-content flex-col lg:flex-row flex-wrap">
-          <Image
+          {/* <Image
             src="/flag.png"
             alt="Placeholder"
             width={250}
             height={250}
             className="max-w-sm rounded-lg shadow-2xl"
-          />
+          /> */}
           <div>
-            <Heading title="Wha a Gwaan a Yaad" />
-            <SubHeading title="Recent Headlines" />
+            <HomeHeading title="Wha a Gwaan a Yaad" />
+            <HomeSubHeading title="Recent Headlines" />
             {isLoading ? (
               <LoadingHomePage />
             ) : (
