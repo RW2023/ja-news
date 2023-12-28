@@ -47,7 +47,7 @@ export default function Home() {
             className="max-w-sm rounded-lg shadow-2xl"
           /> */}
           <div>
-            <HomeHeading title="Wha a Gwaan a Yaad" />
+            <HomeHeading title="jamaican news" />
             <HomeSubHeading title="Recent Headlines" />
             {isLoading ? (
               <LoadingHomePage />
