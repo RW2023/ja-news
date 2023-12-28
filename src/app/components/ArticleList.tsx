@@ -13,20 +13,18 @@ const placeholderImage = '/flag.png'; // Placeholder image path
 const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
   return (
     <div
-      className="container grid gap-6 p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 shadow-lg mr-auto "
+      className="container grid gap-6 p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 shadow-lg mx-auto text-center"
       style={{
         backgroundImage: 'url(/flag.png)',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
       }}
     >
       {articles.map((article, index) => (
         <div
           key={index}
-          className="card p-4 rounded-lg shadow-lg  border drop-shadow-md bg-base-300"
+          className="card p-4 rounded-lg shadow-lg  border drop-shadow-md bg-base-300 flex flex-col justify-between"
         >
           <div className="card-title flex justify-center items-center">
-            <h2 className="text-2xl  font-bold mb-2 border-y border-1 drop-shadow-xl">
+            <h2 className="text-2xl  font-bold mb-2 border-y border-1 drop-shadow-xl mt-2">
               {article.title}
             </h2>
           </div>
