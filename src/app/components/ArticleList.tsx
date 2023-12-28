@@ -44,7 +44,7 @@ const ArticleCard: React.FC<{ article: NewsArticle; index: number }> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
-      className="card p-4 rounded-lg shadow-lg  border drop-shadow-md bg-base-300 flex flex-col justify-between"
+      className="card p-4 rounded-lg shadow-lg  border drop-shadow-md bg-base-300 flex flex-col justify-center items-center"
     >
       <div className="card-title flex justify-center items-center">
         <h2 className="text-2xl  font-bold mb-2 border-y border-1 drop-shadow-xl mt-2">
@@ -58,22 +58,26 @@ const ArticleCard: React.FC<{ article: NewsArticle; index: number }> = ({
         </p>
         <p className="text-sm m-2  text-left">Outlet: {article.source_id}</p>
         <p className="text-sm m-2  text-left">Author: {article.creator}</p>{' '}
-        <img
-          src={article.image_url || placeholderImage}
-          alt={article.title}
-          className="w-full rounded-lg mb-4 object-cover bg-base-200 p-2"
-        />
+        <figure>
+          <img
+            src={article.image_url || placeholderImage}
+            alt={article.title}
+            className="w-full rounded-lg mb-4 object-cover bg-base-200 p-2"
+          />
+        </figure>
       </div>
-      <div className="card-body mb-2 text-left text-xl bg-base-300 rounded-lg m-1 drop-shadow-md border-y-2">
-        <p className="text-lg">{article.description}</p>
-        <a
-          href={article.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary mt-4 rounded-md border text-lg drop-shadow-2xl"
-        >
-          <i className="fas fa-chevron-right mr-2"></i>Read more
-        </a>
+      <div className="card-body mb-2 text-left text-xl bg-base-300 rounded-lg m-1 drop-shadow-md border-y-2 h-auto">
+        <article className="pros text-lg">{article.description}</article>
+        <div className='card-actions'>
+          <a
+            href={article.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary mt-4 rounded-md border text-lg drop-shadow-2xl"
+          >
+            <i className="fas fa-chevron-right mr-2"></i>Read more
+          </a>
+        </div>
       </div>
       {/* Additional elements (like share buttons) can be added here */}
     </motion.div>
