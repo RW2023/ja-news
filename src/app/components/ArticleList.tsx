@@ -44,14 +44,14 @@ const ArticleCard: React.FC<{ article: NewsArticle; index: number }> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
-      className="card p-4 rounded-lg shadow-lg  border drop-shadow-md bg-base-300 flex flex-col justify-center items-center"
+      className="card-compact p-4 rounded-lg shadow-lg  border drop-shadow-md bg-base-300 flex flex-col justify-center items-center"
     >
       <div className="card-title flex justify-center items-center">
         <h2 className="border-y border-1 drop-shadow-xl  text-xl font-semibold font-poppins text-center mb-6 mt-6">
           {article.title}
         </h2>
       </div>
-      <div className="attribution text-sm italic border border-1 rounded drop-shadow-sm bg-base">
+      <div className="attribution text-sm italic border border-1 rounded drop-shadow-sm bg-base text-paragraph">
         {' '}
         <p className="m-2 text-base text-left">
           Article Published {article.pubDate}
@@ -66,8 +66,8 @@ const ArticleCard: React.FC<{ article: NewsArticle; index: number }> = ({
           />
         </figure>
       </div>
-      <div className="card-body mb-2 text-left text-xl bg-base-300 rounded-lg m-1 drop-shadow-md border-y-2 h-auto">
-        <article className="pros text-lg">{article.description}</article>
+      <div className="card-body mb-2  text-xl rounded-lg m-1 drop-shadow-md border-y-2 h-auto">
+        <article className="pros  bg-base-200 p-2 rounded-md text-justify text-lg border">{article.description}</article>
         <div className="card-actions">
           <a
             href={article.link}
