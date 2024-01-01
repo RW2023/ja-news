@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    font-family: 'roboto-slab', serif;
+    font-family: 'Roboto-slab', sans-serif;
 }
 
 h1,
@@ -12,5 +12,5 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
