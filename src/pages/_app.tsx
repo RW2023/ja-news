@@ -1,6 +1,8 @@
 import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import Layout from '@/app/layout';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
