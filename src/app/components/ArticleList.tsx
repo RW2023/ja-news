@@ -51,7 +51,7 @@ const ArticleCard: React.FC<{ article: NewsArticle; index: number }> = ({
           {article.title}
         </h2>
       </div>
-      <div className="attribution text-sm text-gray-500 italic">
+      <div className="attribution text-sm italic border border-1 rounded drop-shadow-sm bg-base">
         {' '}
         <p className="m-2 text-base text-left">
           Article Published {article.pubDate}
