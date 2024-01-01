@@ -25,8 +25,8 @@ module.exports = {
         tertiary: '#000000',
       },
       fontFamily: {
-        sans: ['Poppins', 'sans'],
-        serif: ['Roboto Slab', 'serif'],
+        sans: ['Poppins', 'sans-serif'],
+        serif: ['Roboto Slab', 'sans-serif'],
       },
     },
   },
