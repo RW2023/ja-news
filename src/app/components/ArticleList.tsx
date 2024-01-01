@@ -47,7 +47,7 @@ const ArticleCard: React.FC<{ article: NewsArticle; index: number }> = ({
       className="card p-4 rounded-lg shadow-lg  border drop-shadow-md bg-base-300 flex flex-col justify-center items-center"
     >
       <div className="card-title flex justify-center items-center">
-        <h2 className="text-2xl  font-bold mb-2 border-y border-1 drop-shadow-xl mt-2">
+        <h2 className="border-y border-1 drop-shadow-xl  text-xl font-semibold font-poppins text-center mb-6 mt-6">
           {article.title}
         </h2>
       </div>
@@ -68,7 +68,7 @@ const ArticleCard: React.FC<{ article: NewsArticle; index: number }> = ({
       </div>
       <div className="card-body mb-2 text-left text-xl bg-base-300 rounded-lg m-1 drop-shadow-md border-y-2 h-auto">
         <article className="pros text-lg">{article.description}</article>
-        <div className='card-actions'>
+        <div className="card-actions">
           <a
             href={article.link}
             target="_blank"
