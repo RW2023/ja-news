@@ -24,10 +24,6 @@ export default function RootLayout({
           content="Jamaican News Headlines and Top Stories"
         />
         <meta name="theme-color" content="#0F392D" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        />
         <link rel="icon" href="/favicon/favicon.ico" />
         <title>Ja-News Aggregator</title>
       </head>
